@@ -1,0 +1,46 @@
+window.wifiName = "";
+window.wifiPass = "";
+window.camID = "";
+window.cameraName = ""
+window.version = ""
+window.quality = "";
+window.ip = "";
+
+
+async function connect() {
+	window.wifiName = dqs(".connect-screen-3 .wifiName").innerHTML;
+	window.wifiPass = dqs(".connect-screen-3 .pass").value;
+	window.camID = "";
+	window.cameraName = dqs(".connect-screen-2 .cam-name").value;
+	window.version = "0.1 stable"
+	window.quality = "1080p";
+	window.ip = "";
+	let srv1 = new XMLHttpRequest;
+	srv1.timeout = 5000;
+	srv1.onload = await function(){
+		window.camID = JSON.parse(srv1.response).camID
+		console.log(srv1.response)
+	}
+	srv1.open("GET", "http://192.168.4.1/camID", true);
+	srv1.send();
+	let srv2 = new XMLHttpRequest;
+	srv2.timeout = 5000;
+	srv2.onload = await function() {
+		window.ip = JSON.parse(srv2.response).ip
+		console.log(srv2.response)
+	}
+	srv2.open("GET", "http://192.168.4.1/connect?net=" + wifiName + "&pass=" + wifiPass, true);
+	srv2.send()
+	let data = {
+		"cameraName":window.cameraName,
+		"camID":window.camID,
+		"wifi":window.wifiName,
+		"version":window.version,
+		"quality":window.quality,
+		"ip":window.ip
+	}
+	let db = JSON.parse(app.fs.cams);
+	db.push(data);
+	app.fs.cams = JSON.stringify(db);
+	//document.location.reload()
+}

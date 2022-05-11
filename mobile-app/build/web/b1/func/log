@@ -1,0 +1,1 @@
+function log(e){let n="";n+="KrendelCam: "+e;let l={time:new Date,version:app.version,text:e};n+="\nDebug: ",n+=b6A4(JSON.stringify(l)),console.log(n),app.fs.log+=n+"\n\n",dqs(".console").innerHTML="<span>"+app.fs.log.replaceAll("\n","<br>")+"</span>"}

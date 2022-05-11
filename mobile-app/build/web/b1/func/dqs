@@ -1,0 +1,1 @@
+function dqs(e){return document.querySelector(e)}

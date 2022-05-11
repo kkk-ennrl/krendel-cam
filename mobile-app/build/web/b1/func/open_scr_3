@@ -1,0 +1,1 @@
+function oS3(e){""!=dqs(".connect-screen-2 .cam-name").value.replace(" ","")&&(dqs(".connect-screen-3 .box .wifiName").innerHTML=e,dqs("#blur").style.display="block",dqs("#blur").style.zIndex="9999999",dqs(".connect-screen-3").style.display="block",dqs(".connect-screen-3").style.zIndex="99999999")}

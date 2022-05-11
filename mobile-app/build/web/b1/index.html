@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>KrendelCam App</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+</head>
+<body>
+
+	<div id="home">
+		<div class="logo">KrendelCam</div>
+		<div class="add" onclick='oS1()'></div>
+
+		<div class="boxs">
+
+		</div>
+	</div>
+
+
+	<div class="console">
+		
+	</div>
+
+	<div id="blur"></div>
+
+	<div class='info-app'>
+		<div class="logo">KrendelCam</div>
+		<div class="back"></div>
+		<div class="info">
+			Данное приложение было разработано для работы с проектом камеры "KrendelCam". <br>
+			Приложение было разработано с помощью web технологий, по этому имеет довольно интересный и удобный интерфейс.<br>
+			Разработчик приложения: Me.Krendel (Самцов Никита)<br>
+			<br>
+			Сайт разработчика: <a href="https://krendel.ml">https://krendel.ml</a> <br>
+		</div>
+	</div>
+
+	<div class="connect-screen-1">
+		<div class="logo">KrendelCam</div>
+		<div class="button" onclick="oS2()">Подключен</div>
+		<div class="alrt">
+			<div class="title">Добавить устройство</div>
+			<div class="text-1">Для начала настройки устройства, подключитесь к Wi-Fi сети</div>
+			<div class="text-2">Обычно сетевое имя имеет название "KrendelCam-<strong>XXXX</strong>".<br> Вместо "<strong>X</strong>" - произвольные символы</div>
+		</div>
+	</div>
+
+	<div class="connect-screen-2">
+		<div class='logo'>KrendelCam</div>
+		<div class='title'>Настроить камеру</div>
+		<input type="text" class='cam-name' placeholder="Введите имя устройства">
+		<div class="camWifi">
+
+			<div class='load'>
+				<div class="loader"></div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="connect-screen-3">
+		<div class="blur"></div>
+		<div class="box">
+			<div class="title">Подключится к Wifi</div>
+			<div class="wifiName">Work</div>
+			<div class="btnCancel" onclick='cS3()'>Отмена</div>
+			<div class='btnEnter' onclick="connect()">Подключить</div>
+			<input type="text" class="pass" placeholder="Введите пароль">
+		</div>
+	</div>
+
+	<script type="text/javascript" src="func/dqs"></script>
+	<script type="text/javascript" src="func/b64"></script>
+	<script type="text/javascript" src="func/log"></script>
+	<script type="text/javascript" src="func/close_s3"></script>
+	<script type="text/javascript" src="func/open_scr_1"></script>
+	<script type="text/javascript" src="func/open_scr_2"></script>
+	<script type="text/javascript" src="func/open_scr_3"></script>
+	<script type="text/javascript" src='func/connect'></script>
+	<script type="text/javascript" src="preload.js"></script>
+
+</body>
+</html>
