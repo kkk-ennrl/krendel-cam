@@ -2,10 +2,12 @@
 
 Данный репозиторий поделен на несколько директорий:
 ```
-| __ mobile-app
-|  |__ design
-|  |   |__ latest
-|  |__ build
-|  |   |__ web
-|  |   |   |__ b1
+|__ mobile-app
+|   |__ design
+|   |   |__ latest
+|   |__ build
+|   |   |__ web
+|   |   |   |__ b1
+|__ scetch
+|   |__ b1
 ```
